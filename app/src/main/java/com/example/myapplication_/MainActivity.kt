@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         var p = 0
         var r = 0.0
         var ppl = 1
-        var r2 = 0.0
+
 
         num.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
