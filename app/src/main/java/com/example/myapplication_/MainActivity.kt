@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 //                if (!s.isNullOrEmpty()) res.text = "Bill value: ${s.toString()}, tip percentage: $p%"
                 if (!s.isNullOrEmpty()) res.text =
                     "Tip amount: ${String.format("%.2f", (s.toString().toDouble() * p / 100))}\n" +
-                            "Everyone should pay ${r / ppl}"
+                            "Everyone should pay ${String.format("%.2f", (r/ppl))}"
                 else res.text = ""
             }
 
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 //                if (x != "") res.text = "Bill value: $x, tip percentage: $p%"
                 r = x * p / 100
                 if (x != 0.0) res.text = "Tip amount: ${String.format("%.2f", r)}\n" +
-                        "Everyone should pay ${r / ppl}"
+                        "Everyone should pay ${String.format("%.2f", (r/ppl))}"
             }
         })
         pplnum.addTextChangedListener(object : TextWatcher {
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
 //                if (!s.isNullOrEmpty()) res.text = "Bill value: ${s.toString()}, tip percentage: $p%"
                 if (x != null) res.text = "Tip amount: ${String.format("%.2f", r)}\n" +
-                        "Everyone should pay ${r / s.toString().toInt()}"
+                        "Everyone should pay ${String.format("%.2f", (r/s.toString().toInt()))}"
 
             }
 
